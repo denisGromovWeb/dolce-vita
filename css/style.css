@@ -28,6 +28,10 @@
   --f-serif:   'Cormorant Garamond', Georgia, serif;
   --f-body:    'Inter', system-ui, sans-serif;
   --f-body-2:  'Manrope', system-ui, sans-serif;
+  --f-script:  'Pinyon Script', 'Great Vibes', cursive;
+
+  /* матовая бумажная фактура для конверта/карточки */
+  --paper-tex: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='120'%20height='120'%3E%3Cfilter%20id='envn'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.9'%20numOctaves='2'%20stitchTiles='stitch'/%3E%3C/filter%3E%3Crect%20width='100%25'%20height='100%25'%20filter='url(%23envn)'%20opacity='0.5'/%3E%3C/svg%3E");
 
   --wrap: 1080px;
   --r: 14px;
@@ -612,8 +616,9 @@ a{ color:inherit; }
   gap:clamp(26px,5vh,54px);
   padding:36px 20px;
   background:
-    radial-gradient(120% 80% at 50% 16%, rgba(255,255,255,.07), transparent 55%),
-    linear-gradient(165deg, #2b3320 0%, #3d4726 55%, #2d3821 100%);
+    radial-gradient(85% 65% at 50% 40%, rgba(70,86,52,.4), transparent 72%),
+    radial-gradient(140% 130% at 50% 50%, transparent 38%, rgba(0,0,0,.5) 100%),
+    linear-gradient(165deg, #222b18 0%, #2f3a22 55%, #1d2614 100%);
   transition:opacity .8s ease, transform .8s ease, visibility .8s;
 }
 .envelope-scene.is-gone{
@@ -625,17 +630,17 @@ a{ color:inherit; }
 .env-intro__over{
   font-family:var(--f-body-2); font-size:.7rem;
   letter-spacing:.34em; text-transform:uppercase;
-  color:rgba(250,244,232,.62); margin:0 0 .6rem;
+  color:rgba(250,244,232,.6); margin:0 0 .5rem;
 }
 .env-intro__names{
-  font-family:var(--f-serif); font-weight:500; font-style:italic;
-  font-size:clamp(2.3rem,7vw,3.9rem); line-height:1; margin:0; color:var(--cream);
+  font-family:var(--f-script); font-weight:400;
+  font-size:clamp(3rem,10vw,5rem); line-height:1; margin:0; color:var(--cream);
 }
-.env-intro__names span{ color:var(--rose); padding:0 .06em; }
+.env-intro__names span{ color:var(--rose); padding:0 .04em; }
 .env-intro__sub{
   font-family:var(--f-serif); font-style:italic;
   font-size:clamp(1rem,2.4vw,1.3rem);
-  color:rgba(250,244,232,.74); margin:.55rem 0 0;
+  color:rgba(250,244,232,.72); margin:.4rem 0 0;
 }
 
 .envelope-wrap{ perspective:1300px; cursor:pointer; border-radius:10px; }
@@ -645,85 +650,107 @@ a{ color:inherit; }
   width:clamp(300px,82vw,440px);
   aspect-ratio:1.5 / 1;
   transform-style:preserve-3d;
-  filter:drop-shadow(0 30px 55px rgba(0,0,0,.45));
-}
-.env-pocket{
-  position:absolute; inset:0; z-index:1;
-  background:linear-gradient(160deg,#3f4a26,#333d1f);
-  border-radius:8px;
+  filter:drop-shadow(0 38px 60px rgba(0,0,0,.6));
 }
 
-/* карточка «Сохраните дату» с фигурным краем */
+/* внутренняя полость конверта */
+.env-pocket{
+  position:absolute; inset:0; z-index:1; border-radius:9px;
+  background:
+    radial-gradient(125% 95% at 50% 4%, #26331b, #141d0e 78%),
+    var(--paper-tex);
+  background-blend-mode:overlay;
+  background-size:cover, 120px;
+  box-shadow:inset 0 2px 10px rgba(0,0,0,.5);
+}
+
+/* карточка «Save the Date» с фигурным краем */
 .std-card{
   position:absolute; left:8%; right:8%; top:4%; bottom:4%;
   z-index:3;
-  background:linear-gradient(180deg,#fdf8ee,#f3ead8);
+  background:linear-gradient(180deg,#fdf8ee,#f1e6d2), var(--paper-tex);
+  background-blend-mode:soft-light; background-size:cover, 120px;
   display:flex; flex-direction:column; align-items:center; justify-content:center;
-  text-align:center; padding:6% 8%;
-  --r:8px;
+  text-align:center; padding:7% 9%;
+  --r:5px;
   -webkit-mask:
-    radial-gradient(var(--r) at 50% 0,    #0000 98%,#000) 0 0   /calc(2*var(--r)) 51% repeat-x,
-    radial-gradient(var(--r) at 50% 100%, #0000 98%,#000) 0 100%/calc(2*var(--r)) 51% repeat-x;
+    radial-gradient(var(--r) at 50% 0,    #0000 97%,#000) 0 0   /calc(2*var(--r)) 51% repeat-x,
+    radial-gradient(var(--r) at 50% 100%, #0000 97%,#000) 0 100%/calc(2*var(--r)) 51% repeat-x;
   mask:
-    radial-gradient(var(--r) at 50% 0,    #0000 98%,#000) 0 0   /calc(2*var(--r)) 51% repeat-x,
-    radial-gradient(var(--r) at 50% 100%, #0000 98%,#000) 0 100%/calc(2*var(--r)) 51% repeat-x;
+    radial-gradient(var(--r) at 50% 0,    #0000 97%,#000) 0 0   /calc(2*var(--r)) 51% repeat-x,
+    radial-gradient(var(--r) at 50% 100%, #0000 97%,#000) 0 100%/calc(2*var(--r)) 51% repeat-x;
+  filter:drop-shadow(0 12px 16px rgba(0,0,0,.45));
   transition:transform 1s cubic-bezier(.2,.7,.2,1);
 }
 .std-card::before{
-  content:""; position:absolute; inset:9px;
-  border:1px solid rgba(111,123,69,.4);
-}
-.std-card__mono{
-  font-family:var(--f-display); font-size:.92rem; letter-spacing:.14em;
-  color:var(--olive); margin-bottom:.35rem;
+  content:""; position:absolute; inset:8px;
+  border:1.5px dotted rgba(111,123,69,.5);
 }
 .std-card__t1{
-  font-family:var(--f-serif); font-style:italic; font-size:1.3rem;
-  color:var(--olive-d); margin:0 0 .15rem;
+  font-family:var(--f-script); font-weight:400;
+  font-size:clamp(2.1rem,8.5vw,2.9rem); line-height:.85;
+  color:#33422c; margin:0 0 .5rem;
 }
 .std-card__names{
-  font-family:var(--f-display); font-size:clamp(1.05rem,4.5vw,1.5rem);
-  color:var(--ink); margin:0; line-height:1.1;
+  font-family:var(--f-serif); font-weight:600;
+  font-size:clamp(.9rem,3.4vw,1.08rem);
+  letter-spacing:.18em; text-transform:uppercase;
+  color:var(--ink); margin:0;
 }
 .std-card__date{
-  font-family:var(--f-serif); font-size:1.05rem; letter-spacing:.1em;
-  color:var(--olive-d); margin:.4rem 0 0;
+  font-family:var(--f-body-2); font-size:.6rem; font-weight:500;
+  letter-spacing:.24em; text-transform:uppercase;
+  color:var(--olive); margin:.55rem 0 0;
 }
 .std-card__place{
-  font-family:var(--f-body-2); font-size:.56rem;
-  letter-spacing:.12em; text-transform:uppercase; line-height:1.5;
-  color:var(--ink-soft); margin:.4rem 0 0;
+  font-family:var(--f-serif); font-style:italic;
+  font-size:.95rem; color:var(--ink-soft); margin:.35rem 0 0;
 }
 
+/* лицевые клапаны конверта */
 .env-front{
-  position:absolute; inset:0; z-index:4;
-  background:linear-gradient(160deg,#454f29,#39431f);
-  border-radius:8px;
+  position:absolute; inset:0; z-index:4; border-radius:8px;
+  background:linear-gradient(158deg,#2c3a20,#1f2a16), var(--paper-tex);
+  background-blend-mode:overlay; background-size:cover, 120px;
+  clip-path:polygon(0% 0%, 50% 52%, 100% 0%, 100% 100%, 0% 100%);
+}
+/* линии сгиба боковых клапанов + лёгкие блики для объёма */
+.env-front::before{
+  content:""; position:absolute; inset:0;
+  background:
+    linear-gradient(to bottom right, transparent calc(50% - 1px), rgba(255,255,255,.05) 50%, transparent calc(50% + 1px)),
+    linear-gradient(to bottom left,  transparent calc(50% - 1px), rgba(255,255,255,.05) 50%, transparent calc(50% + 1px)),
+    linear-gradient(180deg, rgba(0,0,0,.28), transparent 30%);
   clip-path:polygon(0% 0%, 50% 52%, 100% 0%, 100% 100%, 0% 100%);
 }
 .env-flap{
   position:absolute; left:0; right:0; top:0; height:52%; z-index:5;
-  background:linear-gradient(180deg,#5d6a3b,#4d592e);
+  background:linear-gradient(180deg,#384824,#283318), var(--paper-tex);
+  background-blend-mode:overlay; background-size:cover, 120px;
   clip-path:polygon(0% 0%, 100% 0%, 50% 100%);
   transform-origin:50% 0%;
   transition:transform .8s ease;
   backface-visibility:hidden;
+  filter:drop-shadow(0 5px 5px rgba(0,0,0,.4));
 }
+
+/* тиснёный каллиграфический вензель */
 .env-mono{
-  position:absolute; left:50%; top:33%;
+  position:absolute; left:50%; top:36%;
   transform:translate(-50%,-50%);
   z-index:6;
-  width:52px; height:52px; border-radius:50%;
-  border:1px solid rgba(250,244,232,.42);
-  display:flex; align-items:center; justify-content:center;
-  font-family:var(--f-display); font-size:1.05rem; color:rgba(250,244,232,.85);
-  transition:opacity .4s ease; pointer-events:none;
+  font-family:var(--f-script);
+  font-size:clamp(2rem,7vw,2.7rem); line-height:1;
+  color:#41512f;
+  text-shadow:0 1px 0 rgba(255,255,255,.18), 0 -1px 1px rgba(0,0,0,.5);
+  letter-spacing:.01em; pointer-events:none;
+  transition:opacity .4s ease;
 }
-.env-mono small{ font-size:.68em; opacity:.8; padding:0 .04em; }
+.env-mono i{ font-style:normal; font-size:.6em; opacity:.8; padding:0 .04em; }
 
 .envelope__hint{
   font-family:var(--f-serif); font-style:italic;
-  font-size:1.05rem; color:rgba(250,244,232,.68);
+  font-size:1.05rem; color:rgba(250,244,232,.66);
   margin:0; animation:hintblink 2.4s ease-in-out infinite;
 }
 @keyframes hintblink{ 0%,100%{opacity:.45} 50%{opacity:1} }
