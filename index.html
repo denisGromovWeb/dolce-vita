@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Денис & Александра · 13.08.2026</title>
+  <meta name="description" content="Приглашение на свадьбу Дениса и Александры — 13 августа 2026, усадьба Скорняково-Архангельское. La dolce vita." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="is-locked">
+
+  <!-- ░░ зерно киноплёнки ░░ -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ░░ интро: старое письмо ░░ -->
+  <div class="envelope-scene" id="envelope">
+    <div class="envelope-wrap">
+      <div class="envelope">
+        <div class="env-pocket"></div>
+        <div class="letter">
+          <p class="letter__over">— вы приглашены —</p>
+          <img class="letter__ico" src="assets/icons/lily.svg" alt="" />
+          <p class="letter__names">Денис&nbsp;&amp;&nbsp;Александра</p>
+          <p class="letter__date">13 · 08 · 2026</p>
+          <p class="letter__sub">la dolce vita</p>
+        </div>
+        <div class="env-front"></div>
+        <div class="env-flap"></div>
+        <button class="env-seal" id="sealBtn" type="button" aria-label="Открыть приглашение">
+          <span class="env-seal__inner">Д<small>&amp;</small>А</span>
+        </button>
+      </div>
+    </div>
+    <p class="envelope__hint" id="envHint">нажмите на печать, чтобы открыть</p>
+  </div>
+
+  <!-- ░░ навигация ░░ -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#hero" aria-label="В начало">Д&nbsp;<span>&amp;</span>&nbsp;А</a>
+    <button class="nav__burger" id="burger" type="button" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__menu" id="navMenu">
+      <a href="#story">История</a>
+      <a href="#program">Программа</a>
+      <a href="#savedate">Дата</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#venue">Место</a>
+      <a href="#dresscode">Дресс-код</a>
+      <a href="#wishlist">Вишлист</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ░░ HERO ░░ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg placeholder" data-ph="фоновое фото — поставим позже"></div>
+      <div class="hero__veil"></div>
+
+      <img class="hero__decor hero__decor--tl" src="assets/icons/lily.svg" alt="" />
+      <img class="hero__decor hero__decor--tr" src="assets/icons/olive-branch.svg" alt="" />
+      <img class="hero__decor hero__decor--bl" src="assets/icons/swan.svg" alt="" />
+      <img class="hero__decor hero__decor--br" src="assets/icons/lemon.svg" alt="" />
+
+      <div class="hero__content">
+        <p class="overline">la dolce vita · 2026</p>
+        <h1 class="couple">Денис <span class="amp">&amp;</span> Александра</h1>
+        <p class="hero__lead">приглашают разделить с ними самый счастливый день</p>
+
+        <div class="hero__meta">
+          <span>13 августа 2026</span>
+          <i aria-hidden="true">·</i>
+          <span>усадьба Скорняково-Архангельское</span>
+        </div>
+
+        <div class="countdown" id="countdown" data-date="2026-08-13T14:00:00+03:00">
+          <div class="cd-cell"><b class="cd-num" data-u="d">—</b><i class="cd-lab">дней</i></div>
+          <div class="cd-cell"><b class="cd-num" data-u="h">—</b><i class="cd-lab">часов</i></div>
+          <div class="cd-cell"><b class="cd-num" data-u="m">—</b><i class="cd-lab">минут</i></div>
+          <div class="cd-cell"><b class="cd-num" data-u="s">—</b><i class="cd-lab">секунд</i></div>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#story" aria-label="Листать вниз">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ░░ НАША ИСТОРИЯ ░░ -->
+    <section class="section story reveal" id="story">
+      <div class="section__head">
+        <img class="section__ico" src="assets/icons/swan.svg" alt="" />
+        <p class="overline">capitolo uno</p>
+        <h2>Наша история</h2>
+      </div>
+      <div class="story__grid">
+        <div class="story__text">
+          <p class="ph-note">Текст-заглушка — заменим на вашу историю.</p>
+          <p>Здесь будет история о том, как всё началось: первая встреча, первое «да» и дорога длиною в любовь, которая привела нас к этому дню.</p>
+          <p>Несколько тёплых абзацев, пара цитат и, может быть, забавная деталь, которую помним только мы двое.</p>
+        </div>
+        <div class="story__photo placeholder" data-ph="фото пары"></div>
+      </div>
+    </section>
+
+    <!-- ░░ ПРОГРАММА — итальянское меню ░░ -->
+    <section class="section program reveal" id="program">
+      <div class="menu-card">
+        <div class="menu-card__top">
+          <img class="menu-card__ico" src="assets/icons/prosecco.svg" alt="" />
+          <p class="overline">il programma</p>
+          <h2 class="menu-card__title">Programma della giornata</h2>
+          <p class="menu-card__sub">программа дня</p>
+          <span class="menu-card__rule"></span>
+        </div>
+
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item__body">
+              <span class="menu-item__it">La Partenza</span>
+              <span class="menu-item__leader"></span>
+              <span class="menu-item__time">12:00</span>
+            </div>
+            <span class="menu-item__ru">Выезд гостей из Воронежа</span>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__body">
+              <span class="menu-item__it">Il Benvenuto</span>
+              <span class="menu-item__leader"></span>
+              <span class="menu-item__time">14:00</span>
+            </div>
+            <span class="menu-item__ru">Welcome у озера и церемония</span>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__body">
+              <span class="menu-item__it">Le Fotografie</span>
+              <span class="menu-item__leader"></span>
+              <span class="menu-item__time">15:00</span>
+            </div>
+            <span class="menu-item__ru">Фотосессия в усадьбе</span>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__body">
+              <span class="menu-item__it">La Sala</span>
+              <span class="menu-item__leader"></span>
+              <span class="menu-item__time">16:00</span>
+            </div>
+            <span class="menu-item__ru">Вход в банкетный зал</span>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__body">
+              <span class="menu-item__it">Il Gran Finale</span>
+              <span class="menu-item__leader"></span>
+              <span class="menu-item__time">22:00</span>
+            </div>
+            <span class="menu-item__ru">Фонтаны и вертушки · завершение программы</span>
+          </li>
+        </ul>
+
+        <div class="menu-card__foot">
+          <img src="assets/icons/lemon.svg" alt="" />
+          <img src="assets/icons/olive-branch.svg" alt="" />
+          <img src="assets/icons/lily.svg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ SAVE THE DATE — календарь ░░ -->
+    <section class="section savedate reveal" id="savedate">
+      <div class="section__head">
+        <img class="section__ico" src="assets/icons/olive-branch.svg" alt="" />
+        <p class="overline">save the date</p>
+        <h2>Сохраните дату</h2>
+      </div>
+      <div class="calendar" aria-label="Август 2026">
+        <p class="calendar__month">Август 2026</p>
+        <div class="calendar__grid">
+          <span class="cal-dow">Пн</span><span class="cal-dow">Вт</span><span class="cal-dow">Ср</span>
+          <span class="cal-dow">Чт</span><span class="cal-dow">Пт</span><span class="cal-dow">Сб</span><span class="cal-dow">Вс</span>
+          <span class="cal-pad"></span><span class="cal-pad"></span><span class="cal-pad"></span>
+          <span class="cal-pad"></span><span class="cal-pad"></span><span>1</span><span>2</span>
+          <span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+          <span>10</span><span>11</span><span>12</span><span class="cal-day">13</span><span>14</span><span>15</span><span>16</span>
+          <span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span>
+          <span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
+          <span>31</span>
+        </div>
+        <p class="calendar__note">встречаемся в четверг ❤</p>
+      </div>
+    </section>
+
+    <!-- ░░ ГАЛЕРЕЯ ░░ -->
+    <section class="section gallery reveal" id="gallery">
+      <div class="section__head">
+        <img class="section__ico" src="assets/icons/lily.svg" alt="" />
+        <p class="overline">la galleria</p>
+        <h2>Усадьба в кадре</h2>
+        <p class="section__lead ph-note">Заглушки — заменим на фотографии усадьбы.</p>
+      </div>
+      <div class="gallery__grid" id="galleryGrid">
+        <button class="gallery__item placeholder" data-ph="фото 1" data-cap="Усадьба · парадный двор"></button>
+        <button class="gallery__item placeholder" data-ph="фото 2" data-cap="Усадьба · озеро"></button>
+        <button class="gallery__item placeholder" data-ph="фото 3" data-cap="Усадьба · сад"></button>
+        <button class="gallery__item placeholder" data-ph="фото 4" data-cap="Усадьба · аллея"></button>
+        <button class="gallery__item placeholder" data-ph="фото 5" data-cap="Усадьба · банкетный зал"></button>
+        <button class="gallery__item placeholder" data-ph="фото 6" data-cap="Усадьба · фонтаны"></button>
+      </div>
+    </section>
+
+    <!-- ░░ МЕСТО ░░ -->
+    <section class="section venue reveal" id="venue">
+      <div class="section__head">
+        <img class="section__ico" src="assets/icons/swan.svg" alt="" />
+        <p class="overline">il luogo</p>
+        <h2>Место и как добраться</h2>
+      </div>
+      <div class="venue__grid">
+        <div class="venue__info">
+          <h3>Усадьба Скорняково-Архангельское</h3>
+          <p>Липецкая область, Задонский район,<br/>село Скорняково</p>
+          <p class="venue__hint">Парковка на территории усадьбы. Подробную схему проезда добавим ближе к дате.</p>
+          <div class="venue__actions">
+            <a class="btn" href="https://yandex.ru/maps/?text=Усадьба%20Скорняково-Архангельское" target="_blank" rel="noopener">Открыть в Яндекс.Картах</a>
+            <a class="btn btn--ghost" href="https://yandex.ru/maps/?rtext=~Усадьба%20Скорняково-Архангельское&rtt=auto" target="_blank" rel="noopener">Построить маршрут</a>
+          </div>
+        </div>
+        <div class="venue__map">
+          <iframe
+            title="Карта · усадьба Скорняково-Архангельское"
+            src="https://yandex.ru/map-widget/v1/?text=Усадьба%20Скорняково-Архангельское&z=14"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ ДРЕСС-КОД ░░ -->
+    <section class="section dresscode reveal" id="dresscode">
+      <div class="section__head">
+        <img class="section__ico" src="assets/icons/lemon.svg" alt="" />
+        <p class="overline">il dress code</p>
+        <h2>Дресс-код</h2>
+        <p class="section__lead">Мы будем очень рады, если вы поддержите цветовую гамму праздника.</p>
+      </div>
+
+      <div class="palette" aria-label="Палитра дресс-кода">
+        <span class="palette__sw" style="--c:#1d1b18" title="чёрный"></span>
+        <span class="palette__sw" style="--c:#6f4d36" title="тёмно-коричневый"></span>
+        <span class="palette__sw" style="--c:#a67c52" title="коричневый"></span>
+        <span class="palette__sw" style="--c:#cbb78f" title="бежевый"></span>
+        <span class="palette__sw" style="--c:#ece0c8" title="кремовый"></span>
+        <span class="palette__sw" style="--c:#ecc9c4" title="нежно-розовый"></span>
+        <span class="palette__sw" style="--c:#aac09b" title="светло-зелёный"></span>
+        <span class="palette__sw" style="--c:#6f7b45" title="оливковый"></span>
+      </div>
+
+      <div class="dresscode__cards">
+        <div class="dc-card">
+          <h3>Палитра праздника</h3>
+          <p>Оливковый и нежно-розовый, а также вся гамма от кремового и бежевого до коричневого и чёрного.</p>
+        </div>
+        <div class="dc-card">
+          <h3>Для мужчин</h3>
+          <p>Основные цвета: белый, бежевый, коричневый и чёрный. Лёгкие ткани и расслабленный итальянский крой.</p>
+        </div>
+        <p class="ph-note dresscode__note">Раздел-заглушка — дополним примерами образов.</p>
+      </div>
+    </section>
+
+    <!-- ░░ ВИШЛИСТ ░░ -->
+    <section class="section wishlist reveal" id="wishlist">
+      <div class="section__head">
+        <img class="section__ico" src="assets/icons/prosecco.svg" alt="" />
+        <p class="overline">la lista</p>
+        <h2>Вишлист</h2>
+        <p class="section__lead ph-note">Заглушка — наполним пожеланиями.</p>
+      </div>
+      <div class="wishlist__cards">
+        <div class="wish-card">
+          <img src="assets/icons/lemon.svg" alt="" />
+          <h3>Впечатления</h3>
+          <p>Будем рады вкладу в наше свадебное путешествие.</p>
+        </div>
+        <div class="wish-card">
+          <img src="assets/icons/lily.svg" alt="" />
+          <h3>Без цветов</h3>
+          <p>Пусть цветы останутся в садах усадьбы.</p>
+        </div>
+        <div class="wish-card">
+          <img src="assets/icons/prosecco.svg" alt="" />
+          <h3>Хорошее настроение</h3>
+          <p>Главное — ваше тепло и улыбки в этот день.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ FAQ ░░ -->
+    <section class="section faq reveal" id="faq">
+      <div class="section__head">
+        <img class="section__ico" src="assets/icons/olive-branch.svg" alt="" />
+        <p class="overline">le domande</p>
+        <h2>Частые вопросы</h2>
+      </div>
+      <div class="faq__list">
+        <details class="faq-item">
+          <summary>Можно ли брать детей?</summary>
+          <div class="faq-item__a"><p>Конечно ❤</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Можно ли дарить цветы?</summary>
+          <div class="faq-item__a"><p>Лучше нет. Пусть они останутся в садах усадьбы.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Что делать, если опаздываю?</summary>
+          <div class="faq-item__a"><p>Не опаздывать ❤</p></div>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ░░ ФУТЕР ░░ -->
+  <footer class="footer">
+    <img class="footer__ico" src="assets/icons/swan.svg" alt="" />
+    <p class="footer__names">Денис&nbsp;&amp;&nbsp;Александра</p>
+    <p class="footer__date">13 августа 2026 · усадьба Скорняково-Архангельское</p>
+    <p class="footer__tag">#ГромовыDolceVita</p>
+    <p class="footer__contacts ph-note">Контакты организатора — заглушка: +7 (___) ___-__-__</p>
+    <p class="footer__sign">сделано с любовью · la dolce vita</p>
+  </footer>
+
+  <!-- ░░ лайтбокс ░░ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <button class="lightbox__close" id="lbClose" type="button" aria-label="Закрыть">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" type="button" aria-label="Назад">&#8249;</button>
+    <figure class="lightbox__fig">
+      <div class="lightbox__media placeholder" id="lbMedia"></div>
+      <figcaption class="lightbox__cap" id="lbCap"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" id="lbNext" type="button" aria-label="Вперёд">&#8250;</button>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

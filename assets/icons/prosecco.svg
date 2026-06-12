@@ -1,0 +1,35 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Бокал просекко">
+  <defs>
+    <filter id="wc-pros" x="-30%" y="-20%" width="160%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="33" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.5" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="0.3"/>
+    </filter>
+    <linearGradient id="glass-pros" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fdfbf4"/>
+      <stop offset="100%" stop-color="#eef0e2"/>
+    </linearGradient>
+    <linearGradient id="wine-pros" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f7e7a6"/>
+      <stop offset="100%" stop-color="#eccf63"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#wc-pros)">
+    <!-- чаша флейты -->
+    <path d="M40 16 C40 40 44 58 50 58 C56 58 60 40 60 16 Z" fill="url(#glass-pros)" stroke="#d8d6c4" stroke-width="0.8"/>
+    <!-- вино -->
+    <path d="M42 30 C43 44 46 56 50 56 C54 56 57 44 58 30 Z" fill="url(#wine-pros)"/>
+    <!-- ножка -->
+    <rect x="49" y="58" width="2" height="22" rx="1" fill="#e2e0d0"/>
+    <!-- основание -->
+    <path d="M38 82 C38 79 62 79 62 82 C62 85 38 85 38 82 Z" fill="#e2e0d0"/>
+    <!-- блик -->
+    <path d="M45 20 C44 34 45 46 47 52" stroke="#fffdf5" stroke-width="1.6" fill="none" opacity="0.8" stroke-linecap="round"/>
+    <!-- пузырьки -->
+    <g fill="#fff7d8">
+      <circle cx="50" cy="50" r="1.1"/><circle cx="47" cy="44" r="0.9"/><circle cx="52" cy="40" r="1"/>
+      <circle cx="49" cy="34" r="0.8"/><circle cx="51" cy="27" r="0.9"/><circle cx="48" cy="22" r="0.7"/>
+      <circle cx="53" cy="12" r="0.9"/><circle cx="47" cy="9" r="0.7"/><circle cx="50" cy="5" r="0.8"/>
+    </g>
+  </g>
+</svg>
