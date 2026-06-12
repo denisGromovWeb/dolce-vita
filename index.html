@@ -17,26 +17,31 @@
   <!-- ░░ зерно киноплёнки ░░ -->
   <div class="grain" aria-hidden="true"></div>
 
-  <!-- ░░ интро: старое письмо ░░ -->
+  <!-- ░░ интро: приглашение-конверт ░░ -->
   <div class="envelope-scene" id="envelope">
-    <div class="envelope-wrap">
+    <div class="env-intro">
+      <p class="env-intro__over">вы приглашены</p>
+      <h1 class="env-intro__names">Денис <span>&amp;</span> Александра</h1>
+      <p class="env-intro__sub">торжество, которое запомнится</p>
+    </div>
+
+    <div class="envelope-wrap" role="button" tabindex="0" aria-label="Открыть приглашение">
       <div class="envelope">
         <div class="env-pocket"></div>
-        <div class="letter">
-          <p class="letter__over">— вы приглашены —</p>
-          <img class="letter__ico" src="assets/icons/lily.svg" alt="" />
-          <p class="letter__names">Денис&nbsp;&amp;&nbsp;Александра</p>
-          <p class="letter__date">13 · 08 · 2026</p>
-          <p class="letter__sub">la dolce vita</p>
+        <div class="std-card">
+          <span class="std-card__mono">Д&nbsp;·&nbsp;А</span>
+          <p class="std-card__t1">Сохраните дату</p>
+          <p class="std-card__names">Денис&nbsp;&amp;&nbsp;Александра</p>
+          <p class="std-card__date">13 августа 2026</p>
+          <p class="std-card__place">усадьба Скорняково-Архангельское</p>
         </div>
         <div class="env-front"></div>
         <div class="env-flap"></div>
-        <button class="env-seal" id="sealBtn" type="button" aria-label="Открыть приглашение">
-          <span class="env-seal__inner">Д<small>&amp;</small>А</span>
-        </button>
+        <span class="env-mono">Д<small>&amp;</small>А</span>
       </div>
     </div>
-    <p class="envelope__hint" id="envHint">нажмите на печать, чтобы открыть</p>
+
+    <p class="envelope__hint" id="envHint">нажмите на конверт, чтобы открыть</p>
   </div>
 
   <!-- ░░ навигация ░░ -->
