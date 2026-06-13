@@ -435,20 +435,26 @@ a{ color:inherit; }
   color:var(--olive); font-weight:600;
 }
 .cal-day{
-  position:relative;
-  background:var(--olive); color:var(--cream);
-  font-weight:600;
-  box-shadow:0 4px 14px rgba(111,123,69,.45);
+  position:relative; isolation:isolate;
+  color:#fff; font-weight:700;
+  background:none; box-shadow:none;
 }
 .cal-day::before{
-  content:""; position:absolute; inset:-5px;
-  border:1px solid var(--rose-d); border-radius:50%;
-  animation:pulse 2.4s ease-out infinite;
+  content:""; position:absolute; z-index:-1;
+  left:50%; top:54%; width:172%; height:172%;
+  transform:translate(-50%,-50%);
+  background:#e25563;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Cpath%20d='M12%2021s-8.5-5.7-8.5-11.2C3.5%206.4%205.8%204%208.7%204c1.8%200%203.2%201%203.3%202.4C12.1%205%2013.5%204%2015.3%204c2.9%200%205.2%202.4%205.2%205.8C20.5%2015.3%2012%2021%2012%2021z'/%3E%3C/svg%3E") center/contain no-repeat;
+          mask:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Cpath%20d='M12%2021s-8.5-5.7-8.5-11.2C3.5%206.4%205.8%204%208.7%204c1.8%200%203.2%201%203.3%202.4C12.1%205%2013.5%204%2015.3%204c2.9%200%205.2%202.4%205.2%205.8C20.5%2015.3%2012%2021%2012%2021z'/%3E%3C/svg%3E") center/contain no-repeat;
+  filter:drop-shadow(0 3px 6px rgba(200,60,70,.45));
+  animation:heartbeat 1.5s ease-in-out infinite;
 }
-@keyframes pulse{
-  0%{ transform:scale(.9); opacity:.8 }
-  70%{ transform:scale(1.25); opacity:0 }
-  100%{ opacity:0 }
+@keyframes heartbeat{
+  0%,100%{ transform:translate(-50%,-50%) scale(1); }
+  12%{ transform:translate(-50%,-50%) scale(1.18); }
+  24%{ transform:translate(-50%,-50%) scale(1); }
+  36%{ transform:translate(-50%,-50%) scale(1.1); }
+  50%{ transform:translate(-50%,-50%) scale(1); }
 }
 .calendar__note{
   font-family:var(--f-serif); font-style:italic;
@@ -533,6 +539,21 @@ a{ color:inherit; }
 .wish-card img{ width:58px; height:58px; margin:0 auto .8rem; }
 .wish-card h3{ font-family:var(--f-serif); font-size:1.4rem; margin-bottom:.3rem; }
 .wish-card p{ margin:0; font-size:.96rem; color:var(--ink-soft); }
+
+/* ════════════════ РАЗМЕЩЕНИЕ ════════════════ */
+.lodging{ text-align:center; }
+.lodging__card{
+  max-width:640px; margin:0 auto;
+  background:rgba(250,244,232,.55);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  padding:clamp(30px,5vw,52px);
+}
+.lodging__ico{ width:56px; height:56px; margin:0 auto 1rem; }
+.lodging__card p{
+  font-family:var(--f-serif); font-size:clamp(1.15rem,2.6vw,1.4rem);
+  color:var(--ink); margin:0 0 1.6rem; line-height:1.5;
+}
 
 /* ════════════════ FAQ ════════════════ */
 .faq__list{ max-width:720px; margin:0 auto; }
