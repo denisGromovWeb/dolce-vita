@@ -66,13 +66,13 @@
 
     <!-- ░░ HERO ░░ -->
     <section class="hero" id="hero">
-      <div class="hero__bg placeholder" data-ph="фоновое фото — поставим позже"></div>
+      <div class="hero__bg"></div>
       <div class="hero__veil"></div>
 
-      <img class="hero__decor hero__decor--tl" src="assets/icons/lily.svg" alt="" />
-      <img class="hero__decor hero__decor--tr" src="assets/icons/olive-branch.svg" alt="" />
-      <img class="hero__decor hero__decor--bl" src="assets/icons/swan.svg" alt="" />
-      <img class="hero__decor hero__decor--br" src="assets/icons/lemon.svg" alt="" />
+<!--      <img class="hero__decor hero__decor&#45;&#45;tl" src="assets/icons/lily.svg" alt="" />-->
+<!--      <img class="hero__decor hero__decor&#45;&#45;tr" src="assets/icons/olive-branch.svg" alt="" />-->
+<!--      <img class="hero__decor hero__decor&#45;&#45;bl" src="assets/icons/swan.svg" alt="" />-->
+<!--      <img class="hero__decor hero__decor&#45;&#45;br" src="assets/icons/lemon.svg" alt="" />-->
 
       <div class="hero__content">
         <p class="overline">la dolce vita · 2026</p>
@@ -103,15 +103,15 @@
       <div class="section__head">
         <img class="section__ico" src="assets/icons/swan.svg" alt="" />
         <p class="overline">capitolo uno</p>
-        <h2>Наша история</h2>
+        <h2>Дорогие родные и друзья!</h2>
       </div>
       <div class="story__grid">
         <div class="story__text">
-          <p class="ph-note">Текст-заглушка — заменим на вашу историю.</p>
-          <p>Здесь будет история о том, как всё началось: первая встреча, первое «да» и дорога длиною в любовь, которая привела нас к этому дню.</p>
-          <p>Несколько тёплых абзацев, пара цитат и, может быть, забавная деталь, которую помним только мы двое.</p>
+<!--          <p class="ph-note">Приглашаем вас.</p>-->
+          <p>В нашей жизни произойдет очень важное событие! Мы верим и надеемся, что этот день станет красивым началом долгой и счастливой жизни.
+          Будем рады разделить его вместе с вами!</p>
         </div>
-        <div class="story__photo placeholder" data-ph="фото пары"></div>
+<!--        <div class="story__photo placeholder" data-ph="фото пары"></div>-->
       </div>
     </section>
 
@@ -201,6 +201,48 @@
       </div>
     </section>
 
+    <!-- ░░ ДРЕСС-КОД ░░ -->
+    <section class="section dresscode reveal" id="dresscode">
+      <div class="section__head">
+        <img class="section__ico" src="assets/icons/lemon.svg" alt="" />
+        <p class="overline">il dress code</p>
+        <h2>Дресс-код</h2>
+        <p class="section__lead">Для нас главное — ваше присутствие! Но мы будем рады, если в своих нарядах вы поддержите концепцию нашего торжества.</p>
+      </div>
+
+      <div class="palette" aria-label="Палитра дресс-кода">
+        <span class="palette__sw" style="--c:#1d1b18" title="чёрный"></span>
+        <span class="palette__sw" style="--c:#7f1734" title="винный"></span>
+        <span class="palette__sw" style="--c:#6f4d36" title="тёмно-коричневый"></span>
+        <span class="palette__sw" style="--c:#6f7b45" title="оливковый"></span>
+        <span class="palette__sw" style="--c:#a67c52" title="коричневый"></span>
+        <span class="palette__sw" style="--c:#cbb78f" title="бежевый"></span>
+<!--        <span class="palette__sw" style="&#45;&#45;c:#ece0c8" title="кремовый"></span>-->
+        <span class="palette__sw" style="--c:#ecc9c4" title="нежно-розовый"></span>
+<!--        <span class="palette__sw" style="&#45;&#45;c:#aac09b" title="светло-зелёный"></span>-->
+      </div>
+
+      <div class="dresscode__cards">
+        <div class="dc-card">
+          <h3>Для девушек</h3>
+          <p>Просим выбрать вечерние образы в предложенных оттенках и избегать белого цвета.</p>
+        </div>
+        <div class="dc-card">
+          <h3>Для мужчин</h3>
+          <p>Уместен классический костюм с рубашкой. Основные цвета: бежевый, оливковый, коричневый и чёрный.</p>
+        </div>
+      </div>
+
+      <p class="dress-gallery__title">примеры образов</p>
+      <div class="dress-gallery">
+        <img src="assets/images/dresscode1.jpg" alt="Пример образа" loading="lazy" />
+        <img src="assets/images/dresscode2.jpg" alt="Пример образа" loading="lazy" />
+        <img src="assets/images/dresscode3.jpg" alt="Пример образа" loading="lazy" />
+        <img src="assets/images/dresscode4.jpg" alt="Пример образа" loading="lazy" />
+        <img src="assets/images/dresscode5.jpg" alt="Пример образа" loading="lazy" />
+      </div>
+    </section>
+
     <!-- ░░ ГАЛЕРЕЯ ░░ -->
     <section class="section gallery reveal" id="gallery">
       <div class="section__head">
@@ -219,34 +261,6 @@
       </div>
     </section>
 
-    <!-- ░░ МЕСТО ░░ -->
-    <section class="section venue reveal" id="venue">
-      <div class="section__head">
-        <img class="section__ico" src="assets/icons/swan.svg" alt="" />
-        <p class="overline">il luogo</p>
-        <h2>Место и как добраться</h2>
-      </div>
-      <div class="venue__grid">
-        <div class="venue__info">
-          <h3>Усадьба Скорняково-Архангельское</h3>
-          <p>Липецкая область, Задонский район,<br/>село Скорняково</p>
-          <p class="venue__hint">Парковка на территории усадьбы. Подробную схему проезда добавим ближе к дате.</p>
-          <div class="venue__actions">
-            <a class="btn" href="https://yandex.ru/maps/?text=Усадьба%20Скорняково-Архангельское" target="_blank" rel="noopener">Открыть в Яндекс.Картах</a>
-            <a class="btn btn--ghost" href="https://yandex.ru/maps/?rtext=~Усадьба%20Скорняково-Архангельское&rtt=auto" target="_blank" rel="noopener">Построить маршрут</a>
-          </div>
-        </div>
-        <div class="venue__map">
-          <iframe
-            title="Карта · усадьба Скорняково-Архангельское"
-            src="https://yandex.ru/map-widget/v1/?text=Усадьба%20Скорняково-Архангельское&z=14"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
-
     <!-- ░░ РАЗМЕЩЕНИЕ ░░ -->
     <section class="section lodging reveal" id="lodging">
       <div class="section__head">
@@ -258,38 +272,6 @@
         <img class="lodging__ico" src="assets/icons/olive-branch.svg" alt="" />
         <p>Уважаемые гости, если у вас есть желание остаться в усадьбе на ночь, позаботьтесь о своём комфортном расположении&nbsp;🤍</p>
         <a class="btn" href="https://usadba-nadonu.ru/gostevye-doma-v-usadbe" target="_blank" rel="noopener">Забронировать номер</a>
-      </div>
-    </section>
-
-    <!-- ░░ ДРЕСС-КОД ░░ -->
-    <section class="section dresscode reveal" id="dresscode">
-      <div class="section__head">
-        <img class="section__ico" src="assets/icons/lemon.svg" alt="" />
-        <p class="overline">il dress code</p>
-        <h2>Дресс-код</h2>
-        <p class="section__lead">Для нас главное — ваше присутствие! Но мы будем рады, если в своих нарядах вы поддержите концепцию нашего торжества.</p>
-      </div>
-
-      <div class="palette" aria-label="Палитра дресс-кода">
-        <span class="palette__sw" style="--c:#1d1b18" title="чёрный"></span>
-        <span class="palette__sw" style="--c:#6f4d36" title="тёмно-коричневый"></span>
-        <span class="palette__sw" style="--c:#a67c52" title="коричневый"></span>
-        <span class="palette__sw" style="--c:#cbb78f" title="бежевый"></span>
-        <span class="palette__sw" style="--c:#ece0c8" title="кремовый"></span>
-        <span class="palette__sw" style="--c:#ecc9c4" title="нежно-розовый"></span>
-        <span class="palette__sw" style="--c:#aac09b" title="светло-зелёный"></span>
-        <span class="palette__sw" style="--c:#6f7b45" title="оливковый"></span>
-      </div>
-
-      <div class="dresscode__cards">
-        <div class="dc-card">
-          <h3>Для девушек</h3>
-          <p>Просим выбрать вечерние образы в предложенных оттенках и избегать белого цвета.</p>
-        </div>
-        <div class="dc-card">
-          <h3>Для мужчин</h3>
-          <p>Уместен классический костюм с рубашкой. Основные цвета: белый, бежевый, коричневый и чёрный.</p>
-        </div>
       </div>
     </section>
 
@@ -316,6 +298,34 @@
           <img src="assets/icons/prosecco.svg" alt="" />
           <h3>Хорошее настроение</h3>
           <p>Главное — ваше тепло и улыбки в этот день.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ МЕСТО ░░ -->
+    <section class="section venue reveal" id="venue">
+      <div class="section__head">
+        <img class="section__ico" src="assets/icons/swan.svg" alt="" />
+        <p class="overline">il luogo</p>
+        <h2>Место и как добраться</h2>
+      </div>
+      <div class="venue__grid">
+        <div class="venue__info">
+          <h3>Усадьба Скорняково-Архангельское</h3>
+          <p>Липецкая область, Задонский район,<br/>село Скорняково</p>
+          <p class="venue__hint">Парковка на территории усадьбы. Подробную схему проезда добавим ближе к дате.</p>
+          <div class="venue__actions">
+            <a class="btn" href="https://yandex.ru/maps/?text=Усадьба%20Скорняково-Архангельское" target="_blank" rel="noopener">Открыть в Яндекс.Картах</a>
+            <a class="btn btn--ghost" href="https://yandex.ru/maps/?rtext=~Усадьба%20Скорняково-Архангельское&rtt=auto" target="_blank" rel="noopener">Построить маршрут</a>
+          </div>
+        </div>
+        <div class="venue__map">
+          <iframe
+                  title="Карта · усадьба Скорняково-Архангельское"
+                  src="https://yandex.ru/map-widget/v1/?text=Усадьба%20Скорняково-Архангельское&z=14"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen></iframe>
         </div>
       </div>
     </section>
@@ -351,7 +361,7 @@
     <p class="footer__names">Денис&nbsp;&amp;&nbsp;Александра</p>
     <p class="footer__date">13 августа 2026 · усадьба Скорняково-Архангельское</p>
     <p class="footer__tag">#ГромовыDolceVita</p>
-    <p class="footer__contacts ph-note">Контакты организатора — заглушка: +7 (___) ___-__-__</p>
+    <p class="footer__contacts ph-note">Контакты организатора — заглушка: +7 (906) 583-71-71</p>
     <p class="footer__sign">сделано с любовью · la dolce vita</p>
   </footer>
 

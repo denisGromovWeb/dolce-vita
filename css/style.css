@@ -228,10 +228,10 @@ a{ color:inherit; }
   border:none;
   background-color:#39402a;
   background-image:
-    linear-gradient(180deg, rgba(25,30,15,.22) 0%, rgba(25,30,15,.42) 100%),
+    linear-gradient(180deg, rgba(20,26,12,.5) 0%, rgba(20,26,12,.14) 38%, rgba(20,26,12,0) 64%),
     url("../assets/images/hero.jpg");
   background-size:cover;
-  background-position:center 45%;
+  background-position:center 60%;
   background-repeat:no-repeat;
 }
 .hero__bg::after{
@@ -241,8 +241,8 @@ a{ color:inherit; }
 .hero__veil{
   position:absolute; inset:0; z-index:1;
   background:
-    linear-gradient(180deg, rgba(40,44,28,.5) 0%, rgba(40,44,28,.18) 38%,
-    rgba(245,237,221,0) 66%, rgba(245,237,221,.85) 90%, var(--paper) 100%);
+    linear-gradient(180deg, rgba(28,30,18,.32) 0%, rgba(28,30,18,.06) 28%,
+    transparent 52%, transparent 85%, rgba(245,237,221,.5) 96%, var(--paper) 100%);
 }
 .hero__content{ position:relative; z-index:3; color:var(--cream); }
 .hero__content .overline{ color:var(--rose); }
@@ -523,6 +523,29 @@ a{ color:inherit; }
 .dc-card h3{ font-family:var(--f-serif); font-size:1.4rem; margin-bottom:.3rem; }
 .dc-card p{ margin:0; font-size:.98rem; color:var(--ink-soft); }
 .dresscode__note{ grid-column:1/-1; text-align:center; margin:0; }
+.dress-gallery__title{
+  text-align:center; font-family:var(--f-serif); font-style:italic;
+  font-size:1.5rem; color:var(--olive-d);
+  margin:clamp(34px,5vw,56px) 0 1.4rem;
+}
+.dress-gallery{
+  display:grid; grid-template-columns:repeat(5,1fr);
+  gap:clamp(8px,1.2vw,14px);
+  max-width:920px; margin:0 auto;
+}
+.dress-gallery img{
+  width:100%; aspect-ratio:3/4; object-fit:cover;
+  border-radius:10px; border:1px solid var(--line);
+  box-shadow:0 8px 20px rgba(66,58,45,.1);
+  transition:transform .4s, box-shadow .4s;
+}
+.dress-gallery img:hover{
+  transform:translateY(-5px) scale(1.02);
+  box-shadow:0 16px 32px rgba(66,58,45,.18);
+}
+@media (max-width:680px){
+  .dress-gallery{ grid-template-columns:repeat(2,1fr); }
+}
 
 /* ════════════════ ВИШЛИСТ ════════════════ */
 .wishlist__cards{
@@ -641,10 +664,12 @@ a{ color:inherit; }
   align-items:center; justify-content:center;
   gap:clamp(26px,5vh,54px);
   padding:36px 20px;
-  background:
-    radial-gradient(85% 65% at 50% 40%, rgba(70,86,52,.4), transparent 72%),
-    radial-gradient(140% 130% at 50% 50%, transparent 38%, rgba(0,0,0,.5) 100%),
-    linear-gradient(165deg, #222b18 0%, #2f3a22 55%, #1d2614 100%);
+  background-image:
+    linear-gradient(rgba(244,238,228,.32), rgba(244,238,228,.42)),
+    url("../assets/images/fon2.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
   transition:opacity .8s ease, transform .8s ease, visibility .8s;
 }
 .envelope-scene.is-gone{
@@ -656,17 +681,18 @@ a{ color:inherit; }
 .env-intro__over{
   font-family:var(--f-body-2); font-size:.7rem;
   letter-spacing:.34em; text-transform:uppercase;
-  color:rgba(250,244,232,.6); margin:0 0 .5rem;
+  color:rgba(90,71,67,.78); margin:0 0 .5rem;
 }
 .env-intro__names{
   font-family:var(--f-script); font-weight:400;
-  font-size:clamp(3rem,10vw,5rem); line-height:1; margin:0; color:var(--cream);
+  font-size:clamp(3rem,10vw,5rem); line-height:1.4; margin:0; color:#5a4743;
+  padding:.12em 0;
 }
-.env-intro__names span{ color:var(--rose); padding:0 .04em; }
+.env-intro__names span{ color:#9c7d75; padding:0 .06em; }
 .env-intro__sub{
   font-family:var(--f-serif); font-style:italic;
   font-size:clamp(1rem,2.4vw,1.3rem);
-  color:rgba(250,244,232,.72); margin:.4rem 0 0;
+  color:rgba(90,71,67,.82); margin:.4rem 0 0;
 }
 
 .envelope-wrap{ perspective:1300px; cursor:pointer; border-radius:10px; }
@@ -683,7 +709,7 @@ a{ color:inherit; }
 .env-pocket{
   position:absolute; inset:0; z-index:1; border-radius:9px;
   background:
-    radial-gradient(125% 95% at 50% 4%, #26331b, #141d0e 78%),
+    radial-gradient(125% 95% at 50% 4%, #3a2c29, #211715 78%),
     var(--paper-tex);
   background-blend-mode:overlay;
   background-size:cover, 120px;
@@ -710,12 +736,12 @@ a{ color:inherit; }
 }
 .std-card::before{
   content:""; position:absolute; inset:8px;
-  border:1.5px dotted rgba(111,123,69,.5);
+  border:1.5px dotted rgba(90,71,67,.45);
 }
 .std-card__t1{
   font-family:var(--f-script); font-weight:400;
   font-size:clamp(2.1rem,8.5vw,2.9rem); line-height:.85;
-  color:#33422c; margin:0 0 .5rem;
+  color:#5a4743; margin:0 0 .5rem;
 }
 .std-card__names{
   font-family:var(--f-serif); font-weight:600;
@@ -726,7 +752,7 @@ a{ color:inherit; }
 .std-card__date{
   font-family:var(--f-body-2); font-size:.6rem; font-weight:500;
   letter-spacing:.24em; text-transform:uppercase;
-  color:var(--olive); margin:.55rem 0 0;
+  color:#5a4743; margin:.55rem 0 0;
 }
 .std-card__place{
   font-family:var(--f-serif); font-style:italic;
@@ -736,7 +762,7 @@ a{ color:inherit; }
 /* лицевые клапаны конверта */
 .env-front{
   position:absolute; inset:0; z-index:4; border-radius:8px;
-  background:linear-gradient(158deg,#2c3a20,#1f2a16), var(--paper-tex);
+  background:linear-gradient(158deg,#5a4743,#463633), var(--paper-tex);
   background-blend-mode:overlay; background-size:cover, 120px;
   clip-path:polygon(0% 0%, 50% 52%, 100% 0%, 100% 100%, 0% 100%);
 }
@@ -751,7 +777,7 @@ a{ color:inherit; }
 }
 .env-flap{
   position:absolute; left:0; right:0; top:0; height:52%; z-index:5;
-  background:linear-gradient(180deg,#384824,#283318), var(--paper-tex);
+  background:linear-gradient(180deg,#6a534e,#564240), var(--paper-tex);
   background-blend-mode:overlay; background-size:cover, 120px;
   clip-path:polygon(0% 0%, 100% 0%, 50% 100%);
   transform-origin:50% 0%;
@@ -767,8 +793,8 @@ a{ color:inherit; }
   z-index:6;
   font-family:var(--f-script);
   font-size:clamp(2rem,7vw,2.7rem); line-height:1;
-  color:#41512f;
-  text-shadow:0 1px 0 rgba(255,255,255,.18), 0 -1px 1px rgba(0,0,0,.5);
+  color:#7c635c;
+  text-shadow:0 1px 0 rgba(255,255,255,.22), 0 -1px 1px rgba(0,0,0,.4);
   letter-spacing:.01em; pointer-events:none;
   transition:opacity .4s ease;
 }
@@ -776,7 +802,7 @@ a{ color:inherit; }
 
 .envelope__hint{
   font-family:var(--f-serif); font-style:italic;
-  font-size:1.05rem; color:rgba(250,244,232,.66);
+  font-size:1.05rem; color:rgba(90,71,67,.72);
   margin:0; animation:hintblink 2.4s ease-in-out infinite;
 }
 @keyframes hintblink{ 0%,100%{opacity:.45} 50%{opacity:1} }
