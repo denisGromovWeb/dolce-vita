@@ -63,6 +63,12 @@ body::before{
   pointer-events:none;
   background:url("../assets/images/zel-fon-1.jpg") center center / cover no-repeat fixed;
 }
+/* десктоп — диагональная тканевая текстура */
+@media (min-width:861px){
+  body::before{
+    background:url("../assets/images/45-degree-fabric-light.png") center center / cover no-repeat fixed;
+  }
+}
 body::after{
   content:"";
   position:fixed; inset:0; z-index:-1;
@@ -554,6 +560,14 @@ a{ color:inherit; }
 }
 @media (max-width:680px){
   .dress-gallery{ grid-template-columns:repeat(2,1fr); }
+}
+/* одиночный пример-коллаж */
+.dress-gallery--single{
+  display:block; max-width:540px; margin:0 auto;
+}
+.dress-gallery--single img{
+  aspect-ratio:auto; object-fit:contain;
+  border-radius:var(--r);
 }
 
 /* ════════════════ ВИШЛИСТ ════════════════ */
