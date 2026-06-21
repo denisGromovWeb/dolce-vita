@@ -66,7 +66,7 @@ body::before{
 /* десктоп — диагональная тканевая текстура */
 @media (min-width:861px){
   body::before{
-    background:url("../assets/images/45-degree-fabric-light.png") center center / cover no-repeat fixed;
+    background:url("../assets/images/45-degree-fabric--light--1920x1080.png") center center / cover no-repeat fixed;
   }
 }
 body::after{
@@ -238,6 +238,8 @@ a{ color:inherit; }
   background-size:cover;
   background-position:center 60%;
   background-repeat:no-repeat;
+  -webkit-mask:linear-gradient(to bottom, #000 70%, transparent 97%);
+          mask:linear-gradient(to bottom, #000 70%, transparent 97%);
 }
 .hero__bg::after{
   inset:auto 0 14px 0; top:auto;
@@ -246,8 +248,7 @@ a{ color:inherit; }
 .hero__veil{
   position:absolute; inset:0; z-index:1;
   background:
-    linear-gradient(180deg, rgba(28,30,18,.32) 0%, rgba(28,30,18,.06) 28%,
-    transparent 52%, transparent 85%, rgba(245,237,221,.5) 96%, var(--paper) 100%);
+    linear-gradient(180deg, rgba(28,30,18,.32) 0%, rgba(28,30,18,.06) 28%, transparent 58%);
 }
 .hero__content{ position:relative; z-index:3; color:var(--cream); }
 .hero__content::before{
@@ -451,25 +452,21 @@ a{ color:inherit; }
 }
 .cal-day{
   position:relative; isolation:isolate;
-  color:#fff; font-weight:700;
+  color:var(--olive-d); font-weight:700;
   background:none; box-shadow:none;
 }
 .cal-day::before{
   content:""; position:absolute; z-index:-1;
-  left:50%; top:54%; width:172%; height:172%;
+  left:50%; top:50%; width:152%; height:152%;
   transform:translate(-50%,-50%);
-  background:#e25563;
-  -webkit-mask:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Cpath%20d='M12%2021s-8.5-5.7-8.5-11.2C3.5%206.4%205.8%204%208.7%204c1.8%200%203.2%201%203.3%202.4C12.1%205%2013.5%204%2015.3%204c2.9%200%205.2%202.4%205.2%205.8C20.5%2015.3%2012%2021%2012%2021z'/%3E%3C/svg%3E") center/contain no-repeat;
-          mask:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Cpath%20d='M12%2021s-8.5-5.7-8.5-11.2C3.5%206.4%205.8%204%208.7%204c1.8%200%203.2%201%203.3%202.4C12.1%205%2013.5%204%2015.3%204c2.9%200%205.2%202.4%205.2%205.8C20.5%2015.3%2012%2021%2012%2021z'/%3E%3C/svg%3E") center/contain no-repeat;
-  filter:drop-shadow(0 3px 6px rgba(200,60,70,.45));
-  animation:heartbeat 1.5s ease-in-out infinite;
+  border:1.5px solid rgba(111,123,69,.5);
+  background:rgba(111,123,69,.09);
+  border-radius:50%;
+  animation:softpulse 2.8s ease-in-out infinite;
 }
-@keyframes heartbeat{
-  0%,100%{ transform:translate(-50%,-50%) scale(1); }
-  12%{ transform:translate(-50%,-50%) scale(1.18); }
-  24%{ transform:translate(-50%,-50%) scale(1); }
-  36%{ transform:translate(-50%,-50%) scale(1.1); }
-  50%{ transform:translate(-50%,-50%) scale(1); }
+@keyframes softpulse{
+  0%,100%{ transform:translate(-50%,-50%) scale(1); opacity:.8; }
+  50%{ transform:translate(-50%,-50%) scale(1.07); opacity:1; }
 }
 .calendar__note{
   font-family:var(--f-serif); font-style:italic;
@@ -567,7 +564,9 @@ a{ color:inherit; }
 }
 .dress-gallery--single img{
   aspect-ratio:auto; object-fit:contain;
-  border-radius:var(--r);
+  border:none; box-shadow:none; border-radius:0;
+  -webkit-mask:radial-gradient(ellipse 92% 92% at 50% 50%, #000 74%, transparent 100%);
+          mask:radial-gradient(ellipse 92% 92% at 50% 50%, #000 74%, transparent 100%);
 }
 
 /* ════════════════ ВИШЛИСТ ════════════════ */
