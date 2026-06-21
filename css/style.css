@@ -56,13 +56,12 @@ body{
 }
 body.is-locked{ overflow:hidden; height:100vh; }
 
-/* кремовый фон + текстура старой бумаги */
+/* фон сайта — зелёная текстура */
 body::before{
   content:"";
   position:fixed; inset:0; z-index:-2;
   pointer-events:none;
-  background:
-    radial-gradient(130% 120% at 50% -10%, #fbf5ea 0%, #f2e8d6 55%, #e8dcc2 100%);
+  background:url("../assets/images/zel-fon-1.jpg") center center / cover no-repeat fixed;
 }
 body::after{
   content:"";
@@ -245,7 +244,12 @@ a{ color:inherit; }
     transparent 52%, transparent 85%, rgba(245,237,221,.5) 96%, var(--paper) 100%);
 }
 .hero__content{ position:relative; z-index:3; color:var(--cream); }
-.hero__content .overline{ color:var(--rose); }
+.hero__content::before{
+  content:""; position:absolute; inset:-12% -16%;
+  background:radial-gradient(ellipse at center, rgba(28,32,18,.55) 0%, rgba(28,32,18,.34) 42%, rgba(28,32,18,0) 72%);
+  z-index:-1; pointer-events:none;
+}
+.hero__content .overline{ color:var(--rose); text-shadow:0 1px 12px rgba(0,0,0,.6); }
 .couple{
   font-family:var(--f-display);
   font-weight:500;
@@ -258,13 +262,15 @@ a{ color:inherit; }
   font-style:italic; font-weight:400;
   color:var(--rose);
   padding:0 .12em;
+  text-shadow:0 2px 18px rgba(0,0,0,.5);
 }
 .hero__lead{
   font-family:var(--f-serif);
   font-style:italic;
   font-size:clamp(1.1rem,2.4vw,1.5rem);
   margin-top:.6rem;
-  color:rgba(250,244,232,.92);
+  color:rgba(250,244,232,.95);
+  text-shadow:0 1px 14px rgba(0,0,0,.55);
 }
 .hero__meta{
   display:flex; flex-wrap:wrap; gap:.6em;
@@ -272,7 +278,8 @@ a{ color:inherit; }
   font-family:var(--f-body-2);
   font-size:.82rem; letter-spacing:.18em; text-transform:uppercase;
   margin-top:1.4rem;
-  color:rgba(250,244,232,.88);
+  color:rgba(250,244,232,.95);
+  text-shadow:0 1px 12px rgba(0,0,0,.6);
 }
 .hero__meta i{ color:var(--rose); font-style:normal; }
 
@@ -343,11 +350,13 @@ a{ color:inherit; }
 
 /* ════════════════ ИСТОРИЯ ════════════════ */
 .story__grid{
-  display:grid; grid-template-columns:1.1fr .9fr;
-  gap:clamp(28px,5vw,64px); align-items:center;
+  max-width:680px; margin:0 auto; text-align:center;
 }
-.story__text p{ font-size:1.05rem; }
-.story__photo{ border-radius:var(--r); min-height:380px; }
+.story__text p{
+  font-family:var(--f-serif); font-style:italic;
+  font-size:clamp(1.25rem,3vw,1.6rem); line-height:1.6; color:var(--ink);
+}
+.story__photo{ display:none; }
 
 /* ════════════════ ПРОГРАММА — меню ════════════════ */
 .program{ display:flex; justify-content:center; }
@@ -793,8 +802,8 @@ a{ color:inherit; }
   z-index:6;
   font-family:var(--f-script);
   font-size:clamp(2rem,7vw,2.7rem); line-height:1;
-  color:#7c635c;
-  text-shadow:0 1px 0 rgba(255,255,255,.22), 0 -1px 1px rgba(0,0,0,.4);
+  color:#f0e7d6;
+  text-shadow:0 1px 2px rgba(0,0,0,.32), 0 -1px 0 rgba(255,255,255,.12);
   letter-spacing:.01em; pointer-events:none;
   transition:opacity .4s ease;
 }

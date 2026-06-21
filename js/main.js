@@ -15,8 +15,8 @@
     setTimeout(() => {                                  // сцена уходит, сайт открыт
       scene.classList.add('is-gone');
       body.classList.remove('is-locked');
-    }, 2150);
-    setTimeout(() => scene && scene.remove(), 3050);
+    }, 4200);
+    setTimeout(() => scene && scene.remove(), 5100);
   }
 
   if (scene) {
