@@ -457,16 +457,15 @@ a{ color:inherit; }
 }
 .cal-day::before{
   content:""; position:absolute; z-index:-1;
-  left:50%; top:50%; width:152%; height:152%;
+  left:50%; top:47%; width:205%; height:205%;
   transform:translate(-50%,-50%);
-  border:1.5px solid rgba(111,123,69,.5);
-  background:rgba(111,123,69,.09);
-  border-radius:50%;
-  animation:softpulse 2.8s ease-in-out infinite;
+  background:url("../assets/icons/lemon.svg") center/contain no-repeat;
+  opacity:.55;
+  animation:lemonpulse 3s ease-in-out infinite;
 }
-@keyframes softpulse{
-  0%,100%{ transform:translate(-50%,-50%) scale(1); opacity:.8; }
-  50%{ transform:translate(-50%,-50%) scale(1.07); opacity:1; }
+@keyframes lemonpulse{
+  0%,100%{ transform:translate(-50%,-50%) scale(1) rotate(-3deg); opacity:.5; }
+  50%{ transform:translate(-50%,-50%) scale(1.07) rotate(3deg); opacity:.66; }
 }
 .calendar__note{
   font-family:var(--f-serif); font-style:italic;
