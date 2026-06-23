@@ -625,6 +625,7 @@ a{ color:inherit; }
 .faq-item__a{ padding:0 0 1.2rem; color:var(--ink-soft); }
 .faq-item__a p{ margin:0; font-size:1.05rem; }
 .faq-ico{ width:32px; height:32px; display:inline-block; vertical-align:middle; margin-right:10px; }
+.inline-ico{ width:1.5em; height:1.5em; display:inline-block; vertical-align:-0.35em; margin:0 .12em; }
 
 /* ════════════════ ФУТЕР ════════════════ */
 .footer{
