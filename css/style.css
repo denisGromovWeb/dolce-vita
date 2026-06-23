@@ -55,20 +55,13 @@ body{
   overflow-x:hidden;
 }
 body.is-locked{ overflow:hidden; height:100vh; }
-body.menu-open{ overflow:hidden; }
 
-/* фон сайта — зелёная текстура */
+/* фон сайта — диагональная тканевая текстура (и десктоп, и мобайл) */
 body::before{
   content:"";
   position:fixed; inset:0; z-index:-2;
   pointer-events:none;
-  background:url("../assets/images/zel-fon-1.jpg") center center / cover no-repeat fixed;
-}
-/* десктоп — диагональная тканевая текстура */
-@media (min-width:861px){
-  body::before{
-    background:url("../assets/images/45-degree-fabric--light--1920x1080.png") center center / cover no-repeat fixed;
-  }
+  background:url("../assets/images/45-degree-fabric--light--1920x1080.png") center center / cover no-repeat fixed;
 }
 body::after{
   content:"";
@@ -665,7 +658,7 @@ a{ color:inherit; }
   color:var(--ink-soft); margin:.7rem 0 0;
 }
 .footer__tag{ font-family:var(--f-serif); font-style:italic; font-size:1.3rem; color:var(--olive); margin:1.2rem 0 .2rem; }
-.footer__contacts{ margin:.2rem 0 0; }
+.footer__contacts{ margin:.6rem 0 0; color:var(--ink); font-size:.95rem; font-family:var(--f-body-2); }
 .footer__sign{
   font-family:var(--f-body-2); font-size:.68rem;
   letter-spacing:.24em; text-transform:uppercase;
@@ -867,11 +860,6 @@ a{ color:inherit; }
 
 /* ════════════════ АДАПТИВ ════════════════ */
 @media (max-width:860px){
-  .hero__bg{
-    background-size:contain;
-    background-position:center 32%;
-    background-color:#2c3520;
-  }
   .nav__burger{
     display:flex; flex-direction:column; justify-content:center; gap:5px;
     width:42px; height:42px; padding:0;
@@ -897,6 +885,10 @@ a{ color:inherit; }
   body.menu-open .nav__burger span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
   body.menu-open .nav__burger span:nth-child(2){ opacity:0; }
   body.menu-open .nav__burger span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+  body.menu-open .nav__burger span{ background:#161616; }
+
+  .venue__info{ text-align:center; }
+  .venue__actions{ justify-content:center; }
 
   .story__grid{ grid-template-columns:1fr; }
   .story__photo{ min-height:300px; order:-1; }

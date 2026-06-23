@@ -71,16 +71,31 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  let savedScrollY = 0;
+  function lockScroll() {
+    savedScrollY = window.scrollY;
+    body.style.position = 'fixed';
+    body.style.top = `-${savedScrollY}px`;
+    body.style.left = '0'; body.style.right = '0'; body.style.width = '100%';
+  }
+  function unlockScroll(restore) {
+    if (body.style.position !== 'fixed') return;
+    body.style.position = ''; body.style.top = '';
+    body.style.left = ''; body.style.right = ''; body.style.width = '';
+    if (restore) window.scrollTo(0, savedScrollY);
+  }
   function closeMenu() {
     navMenu && navMenu.classList.remove('is-open');
     body.classList.remove('menu-open');
     burger && burger.setAttribute('aria-expanded', 'false');
+    unlockScroll(false);   // не возвращаем позицию — даём ссылке-якорю сработать
   }
   if (burger && navMenu) {
     burger.addEventListener('click', () => {
       const open = navMenu.classList.toggle('is-open');
       body.classList.toggle('menu-open', open);
       burger.setAttribute('aria-expanded', String(open));
+      if (open) lockScroll(); else unlockScroll(true);   // крестик — вернуть на место
     });
     navMenu.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeMenu));
   }
