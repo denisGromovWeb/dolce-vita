@@ -1,0 +1,36 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Рожок джелато">
+  <defs>
+    <filter id="wc-gelato" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="3" seed="34" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="0.35"/>
+    </filter>
+    <linearGradient id="cone-gelato" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d8b87e"/>
+      <stop offset="100%" stop-color="#bd965a"/>
+    </linearGradient>
+    <radialGradient id="scoop-pistachio" cx="38%" cy="32%" r="75%">
+      <stop offset="0%" stop-color="#c0d0ad"/>
+      <stop offset="100%" stop-color="#9aae89"/>
+    </radialGradient>
+    <radialGradient id="scoop-rose" cx="40%" cy="34%" r="75%">
+      <stop offset="0%" stop-color="#f2d6d7"/>
+      <stop offset="100%" stop-color="#dfb4b5"/>
+    </radialGradient>
+    <radialGradient id="scoop-cream" cx="40%" cy="34%" r="75%">
+      <stop offset="0%" stop-color="#fbf4e3"/>
+      <stop offset="100%" stop-color="#eedfc4"/>
+    </radialGradient>
+  </defs>
+  <g filter="url(#wc-gelato)">
+    <path d="M50 96 C46 80 38 64 33 53 C44 58 56 58 67 53 C62 64 54 80 50 96 Z" fill="url(#cone-gelato)"/>
+    <path d="M40 54 L52 49 M37 60 L49 55 M44 68 L55 63 M48 76 L57 72" fill="none" stroke="#a37f48" stroke-width="0.9" stroke-linecap="round" opacity="0.55"/>
+    <ellipse cx="50" cy="46" rx="22" ry="11" fill="url(#scoop-cream)"/>
+    <ellipse cx="38" cy="33" rx="15" ry="14" fill="url(#scoop-pistachio)"/>
+    <ellipse cx="62" cy="33" rx="15" ry="14" fill="url(#scoop-rose)"/>
+    <ellipse cx="50" cy="22" rx="14" ry="13" fill="url(#scoop-cream)"/>
+    <ellipse cx="33" cy="28" rx="4.5" ry="3.8" fill="#cfdcbe" opacity="0.7"/>
+    <ellipse cx="58" cy="28" rx="4.5" ry="3.8" fill="#f7e2e3" opacity="0.7"/>
+    <ellipse cx="46" cy="18" rx="4" ry="3.4" fill="#fdf7ea" opacity="0.7"/>
+  </g>
+</svg>

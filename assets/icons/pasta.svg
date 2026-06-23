@@ -1,0 +1,52 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Тарелка спагетти">
+  <defs>
+    <filter id="wc-pasta" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="3" seed="12" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="0.35"/>
+    </filter>
+    <radialGradient id="plate-pasta" cx="42%" cy="36%" r="72%">
+      <stop offset="0%" stop-color="#faf3e4"/>
+      <stop offset="100%" stop-color="#ecdfc6"/>
+    </radialGradient>
+    <radialGradient id="well-pasta" cx="45%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#f3ead8"/>
+      <stop offset="100%" stop-color="#e3d5b9"/>
+    </radialGradient>
+    <linearGradient id="noodle-pasta" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#efce6e"/>
+      <stop offset="100%" stop-color="#dbb24a"/>
+    </linearGradient>
+    <radialGradient id="mound-pasta" cx="45%" cy="38%" r="68%">
+      <stop offset="0%" stop-color="#ecc762"/>
+      <stop offset="100%" stop-color="#cfa340"/>
+    </radialGradient>
+    <radialGradient id="tomato-pasta" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#cf6a4d"/>
+      <stop offset="100%" stop-color="#b14a34"/>
+    </radialGradient>
+  </defs>
+  <g filter="url(#wc-pasta)">
+    <ellipse cx="50" cy="54" rx="44" ry="40" fill="url(#plate-pasta)"/>
+    <ellipse cx="50" cy="54" rx="33" ry="29" fill="url(#well-pasta)"/>
+    <path d="M28 56 C24 44 36 34 50 35 C66 34 78 45 73 58 C68 70 56 74 48 73 C36 72 31 66 28 56 Z" fill="url(#mound-pasta)"/>
+    <g fill="none" stroke="url(#noodle-pasta)" stroke-width="2.6" stroke-linecap="round" opacity="0.95">
+      <path d="M34 56 C32 46 42 42 50 44 C58 46 60 54 54 58 C49 61 44 58 46 53"/>
+      <path d="M40 64 C36 56 44 49 53 50 C62 51 66 59 60 64"/>
+      <path d="M30 52 C30 60 38 66 48 67"/>
+    </g>
+    <g fill="none" stroke="#e7c45f" stroke-width="1.6" stroke-linecap="round" opacity="0.85">
+      <path d="M58 40 C70 34 80 26 84 18"/>
+      <path d="M55 41 C66 36 77 28 82 20"/>
+      <path d="M61 41 C72 36 81 29 86 22"/>
+    </g>
+    <g fill="none" stroke="#a8a39a" stroke-width="2.2" stroke-linecap="round" opacity="0.7">
+      <path d="M84 18 L88 9"/>
+      <path d="M83 21 L87 12"/>
+    </g>
+    <ellipse cx="42" cy="62" rx="4.4" ry="3.8" fill="url(#tomato-pasta)"/>
+    <ellipse cx="60" cy="52" rx="3.6" ry="3.2" fill="url(#tomato-pasta)" opacity="0.9"/>
+    <path d="M52 66 C48 64 49 59 54 60 C56 63 55 66 52 66 Z" fill="#6f7b45"/>
+    <path d="M37 50 C34 49 35 45 39 46 C40 48 39 50 37 50 Z" fill="#7c8a4e" opacity="0.9"/>
+  </g>
+</svg>

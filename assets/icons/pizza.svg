@@ -1,0 +1,47 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Кусок пиццы маргарита">
+  <defs>
+    <filter id="wc-pizza" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="3" seed="23" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="0.35"/>
+    </filter>
+    <linearGradient id="dough-pizza" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#efdcaf"/>
+      <stop offset="100%" stop-color="#e0c891"/>
+    </linearGradient>
+    <linearGradient id="crust-pizza" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8d3a6"/>
+      <stop offset="100%" stop-color="#d6bd84"/>
+    </linearGradient>
+    <radialGradient id="sauce-pizza" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#cd6850"/>
+      <stop offset="100%" stop-color="#b54e37"/>
+    </radialGradient>
+    <radialGradient id="cheese-pizza" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#f6e8bd"/>
+      <stop offset="100%" stop-color="#ecd79f"/>
+    </radialGradient>
+    <linearGradient id="basil-pizza" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7e8a52"/>
+      <stop offset="100%" stop-color="#5c6739"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#wc-pizza)">
+    <path d="M50 12 C58 30 70 64 80 86 C66 92 36 92 20 86 C30 64 42 30 50 12 Z" fill="url(#dough-pizza)"/>
+    <path d="M22 84 C36 90 64 90 78 84 C76 78 70 75 64 77 C54 80 46 80 36 77 C30 75 24 78 22 84 Z" fill="url(#crust-pizza)"/>
+    <path d="M50 22 C56 36 66 62 73 79 C60 84 40 84 27 79 C34 62 44 36 50 22 Z" fill="url(#sauce-pizza)"/>
+    <g fill="url(#cheese-pizza)" opacity="0.92">
+      <ellipse cx="49" cy="38" rx="7" ry="5.5"/>
+      <ellipse cx="38" cy="58" rx="6.5" ry="5"/>
+      <ellipse cx="60" cy="60" rx="7.5" ry="5.5"/>
+      <ellipse cx="48" cy="72" rx="6" ry="4.5"/>
+      <ellipse cx="56" cy="46" rx="4.5" ry="3.5"/>
+    </g>
+    <g fill="url(#basil-pizza)">
+      <path d="M44 50 C40 45 42 39 48 39 C50 45 49 50 44 50 Z"/>
+      <path d="M58 66 C55 61 57 55 63 56 C63 62 62 67 58 66 Z"/>
+      <path d="M40 70 C37 66 39 61 45 62 C45 67 44 71 40 70 Z"/>
+    </g>
+    <path d="M50 26 C55 40 64 60 70 76" fill="none" stroke="#a8462f" stroke-width="0.6" stroke-linecap="round" opacity="0.4"/>
+  </g>
+</svg>
