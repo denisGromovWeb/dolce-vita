@@ -604,6 +604,20 @@ a{ color:inherit; }
   color:var(--ink); margin:0; line-height:1.6;
 }
 
+/* ════════════════ СЮРПРИЗ ════════════════ */
+.surprise{ text-align:center; }
+.surprise__card{
+  max-width:600px; margin:0 auto;
+  background:rgba(250,244,232,.55);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  padding:clamp(30px,5vw,48px);
+}
+.surprise__card p{
+  font-family:var(--f-serif); font-size:clamp(1.15rem,2.6vw,1.4rem);
+  color:var(--ink); margin:0 0 1.6rem; line-height:1.6;
+}
+
 /* ════════════════ РАЗМЕЩЕНИЕ ════════════════ */
 .lodging{ text-align:center; }
 .lodging__card{
