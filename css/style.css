@@ -55,6 +55,7 @@ body{
   overflow-x:hidden;
 }
 body.is-locked{ overflow:hidden; height:100vh; }
+body.menu-open{ overflow:hidden; }
 
 /* фон сайта — зелёная текстура */
 body::before{
@@ -563,15 +564,20 @@ a{ color:inherit; }
 @media (max-width:680px){
   .dress-gallery{ grid-template-columns:repeat(2,1fr); }
 }
-/* одиночный пример-коллаж */
+/* одиночный пример-коллаж — в кремовом паспарту, как вложенный мудборд */
 .dress-gallery--single{
-  display:block; max-width:540px; margin:0 auto;
+  display:block; max-width:470px; margin:0 auto;
+  background:linear-gradient(180deg,#fdf8ee,#f3ead8);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  padding:clamp(14px,2.4vw,22px);
+  box-shadow:0 18px 44px rgba(66,58,45,.14);
 }
 .dress-gallery--single img{
   aspect-ratio:auto; object-fit:contain;
-  border:none; box-shadow:none; border-radius:0;
-  -webkit-mask:radial-gradient(ellipse 92% 92% at 50% 50%, #000 74%, transparent 100%);
-          mask:radial-gradient(ellipse 92% 92% at 50% 50%, #000 74%, transparent 100%);
+  border:1px solid rgba(66,58,45,.12); box-shadow:none; border-radius:8px;
+  filter:saturate(.85) contrast(.96) brightness(1.02);
+  -webkit-mask:none; mask:none;
 }
 
 /* ════════════════ ВИШЛИСТ ════════════════ */
@@ -589,6 +595,21 @@ a{ color:inherit; }
 .wish-card img{ width:58px; height:58px; margin:0 auto .8rem; }
 .wish-card h3{ font-family:var(--f-serif); font-size:1.4rem; margin-bottom:.3rem; }
 .wish-card p{ margin:0; font-size:.96rem; color:var(--ink-soft); }
+/* вишлист — одиночный блок */
+.wishlist{ text-align:center; }
+.wishlist__single{
+  max-width:600px; margin:0 auto;
+  background:rgba(250,244,232,.55);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  padding:clamp(30px,5vw,52px);
+}
+.wishlist__ico{ width:58px; height:58px; margin:0 auto .8rem; }
+.wishlist__single h3{ font-family:var(--f-serif); font-size:1.7rem; margin:0 0 .6rem; color:var(--olive-d); }
+.wishlist__single p{
+  font-family:var(--f-serif); font-size:clamp(1.15rem,2.6vw,1.4rem);
+  color:var(--ink); margin:0; line-height:1.6;
+}
 
 /* ════════════════ РАЗМЕЩЕНИЕ ════════════════ */
 .lodging{ text-align:center; }
@@ -846,6 +867,11 @@ a{ color:inherit; }
 
 /* ════════════════ АДАПТИВ ════════════════ */
 @media (max-width:860px){
+  .hero__bg{
+    background-size:contain;
+    background-position:center 32%;
+    background-color:#2c3520;
+  }
   .nav__burger{
     display:flex; flex-direction:column; justify-content:center; gap:5px;
     width:42px; height:42px; padding:0;
