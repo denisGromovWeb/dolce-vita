@@ -1,0 +1,60 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Молодожёны в чёрном ретро-кабриолете">
+  <defs>
+    <filter id="wc-cara" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="3" seed="92" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="0.35"/>
+    </filter>
+    <linearGradient id="cara-body" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3a3530"/><stop offset="100%" stop-color="#221f1b"/>
+    </linearGradient>
+    <linearGradient id="cara-low" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a2622"/><stop offset="100%" stop-color="#17140f"/>
+    </linearGradient>
+    <linearGradient id="cara-veil" x1="100%" y1="0%" x2="0%" y2="60%">
+      <stop offset="0%" stop-color="#fbf5ea"/><stop offset="100%" stop-color="#efe6d4"/>
+    </linearGradient>
+    <radialGradient id="cara-wheel" cx="50%" cy="50%" r="50%">
+      <stop offset="60%" stop-color="#2a2622"/><stop offset="100%" stop-color="#17140f"/>
+    </radialGradient>
+  </defs>
+  <g filter="url(#wc-cara)">
+    <g stroke="#e7c2c3" stroke-width="1.6" stroke-linecap="round" opacity="0.7" fill="none">
+      <path d="M3 44 H17"/><path d="M5 52 H21"/><path d="M2 60 H15"/>
+    </g>
+
+    <path d="M28 86 C52 90 78 90 96 84 C95 78 92 74 88 73 L26 73 C24 76 25 82 28 86 Z" fill="url(#cara-low)"/>
+
+    <path d="M24 73 C22 67 26 61 33 60 L52 60 C56 54 60 50 66 49 C74 48 80 51 83 57 C88 58 92 62 93 68 C94 71 93 73 91 74 L26 74 C24 74 24 73 24 73 Z" fill="url(#cara-body)"/>
+    <path d="M55 60 C58 56 61 53 65 52 C71 51 76 53 79 57 Z" fill="#3f3a34" opacity="0.85"/>
+
+    <g>
+      <ellipse cx="71" cy="50" rx="6.5" ry="7" fill="#1f1c18"/>
+      <circle cx="71.5" cy="48" r="4.3" fill="#e3b99a"/>
+      <path d="M65 60 C66 54 69 51 74 51 C79 52 81 56 81 61 Z" fill="#1f1c18"/>
+      <path d="M68 55 C70 52 73 51 76 52 L75 56 Z" fill="#fbf5ea" opacity="0.55"/>
+    </g>
+
+    <g>
+      <path d="M52 49 C49 44 51 39 56 38 C61 37 65 40 66 45 C67 49 64 53 60 54 C56 55 53 53 52 49 Z" fill="#f0e7d6"/>
+      <ellipse cx="56.5" cy="47" rx="5.4" ry="6.2" fill="#ecc4a4"/>
+      <path d="M50 60 C50 53 53 50 58 50 C63 50 67 53 68 60 Z" fill="url(#cara-veil)"/>
+    </g>
+
+    <path d="M62 47 C50 42 36 41 22 45 C12 48 7 53 6 57 C16 53 30 51 44 53 C52 54 58 53 63 50 Z" fill="url(#cara-veil)" opacity="0.92"/>
+    <path d="M60 49 C46 46 32 47 20 52 C32 50 46 51 58 54 Z" fill="#fbf5ea" opacity="0.6"/>
+
+    <g>
+      <circle cx="38" cy="80" r="11" fill="url(#cara-wheel)"/>
+      <circle cx="38" cy="80" r="5.4" fill="#e7c2c3"/>
+      <circle cx="38" cy="80" r="2.2" fill="#3a3530"/>
+    </g>
+    <g>
+      <circle cx="80" cy="80" r="11" fill="url(#cara-wheel)"/>
+      <circle cx="80" cy="80" r="5.4" fill="#e7c2c3"/>
+      <circle cx="80" cy="80" r="2.2" fill="#3a3530"/>
+    </g>
+
+    <ellipse cx="93" cy="69" rx="3" ry="2.4" fill="#e7c2c3" opacity="0.85"/>
+  </g>
+</svg>
