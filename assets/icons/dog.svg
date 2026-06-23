@@ -1,10 +1,5 @@
 <svg width="256" height="256" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Милая собака">
   <defs>
-    <filter id="wc-dog" x="-20%" y="-20%" width="140%" height="140%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="3" seed="78" result="n"/>
-      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
-      <feGaussianBlur stdDeviation="0.35"/>
-    </filter>
     <radialGradient id="dog-head" cx="42%" cy="34%" r="72%">
       <stop offset="0%" stop-color="#c79560"/>
       <stop offset="100%" stop-color="#a9763f"/>
@@ -22,7 +17,7 @@
       <stop offset="100%" stop-color="#33271d"/>
     </radialGradient>
   </defs>
-  <g filter="url(#wc-dog)">
+  <g>
     <path d="M22 30 C16 18 26 12 34 18 C38 26 36 38 28 42 C22 40 20 35 22 30 Z" fill="url(#dog-ear)"/>
     <path d="M78 30 C84 18 74 12 66 18 C62 26 64 38 72 42 C78 40 80 35 78 30 Z" fill="url(#dog-ear)"/>
     <path d="M50 16 C72 16 84 34 83 54 C82 74 68 88 50 88 C32 88 18 74 17 54 C16 34 28 16 50 16 Z" fill="url(#dog-head)"/>

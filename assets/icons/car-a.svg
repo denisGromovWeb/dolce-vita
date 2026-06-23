@@ -1,10 +1,5 @@
 <svg width="256" height="256" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Молодожёны в чёрном ретро-кабриолете">
   <defs>
-    <filter id="wc-cara" x="-25%" y="-25%" width="150%" height="150%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="3" seed="92" result="n"/>
-      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
-      <feGaussianBlur stdDeviation="0.35"/>
-    </filter>
     <linearGradient id="cara-body" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#3a3530"/><stop offset="100%" stop-color="#221f1b"/>
     </linearGradient>
@@ -18,7 +13,7 @@
       <stop offset="60%" stop-color="#2a2622"/><stop offset="100%" stop-color="#17140f"/>
     </radialGradient>
   </defs>
-  <g filter="url(#wc-cara)">
+  <g>
     <g stroke="#e7c2c3" stroke-width="1.6" stroke-linecap="round" opacity="0.7" fill="none">
       <path d="M3 44 H17"/><path d="M5 52 H21"/><path d="M2 60 H15"/>
     </g>

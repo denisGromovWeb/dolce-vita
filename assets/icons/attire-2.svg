@@ -1,10 +1,5 @@
 <svg width="256" height="256" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Платье и смокинг — дресс-код">
   <defs>
-    <filter id="wc-attire-2" x="-20%" y="-20%" width="140%" height="140%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="3" seed="56" result="n"/>
-      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
-      <feGaussianBlur stdDeviation="0.35"/>
-    </filter>
     <linearGradient id="dress-rose" x1="20%" y1="0%" x2="80%" y2="100%">
       <stop offset="0%" stop-color="#f0d3d4"/>
       <stop offset="100%" stop-color="#d9a9aa"/>
@@ -22,7 +17,7 @@
       <stop offset="100%" stop-color="#e3d8c2"/>
     </radialGradient>
   </defs>
-  <g filter="url(#wc-attire-2)">
+  <g>
     <!-- Платье слева -->
     <g fill="url(#dress-bodice)">
       <path d="M22 22 C25 19 33 19 36 22 C35 28 33 34 32 40 C30 41 28 41 26 40 C25 34 23 28 22 22 Z"/>

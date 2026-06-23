@@ -1,10 +1,5 @@
 <svg width="256" height="256" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Знак вопроса">
   <defs>
-    <filter id="wc-question" x="-25%" y="-25%" width="150%" height="150%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="3" seed="100" result="n"/>
-      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
-      <feGaussianBlur stdDeviation="0.35"/>
-    </filter>
     <linearGradient id="q-ink" x1="0%" y1="0%" x2="60%" y2="100%">
       <stop offset="0%" stop-color="#b08a4f"/>
       <stop offset="55%" stop-color="#977c4c"/>
@@ -19,7 +14,7 @@
       <stop offset="100%" stop-color="#5d6a37"/>
     </linearGradient>
   </defs>
-  <g filter="url(#wc-question)">
+  <g>
     <path d="M30 31 C30 17 45 11 57 14 C70 17 75 28 70 38 C66 46 56 49 53 56 C51 61 51 66 51 70" fill="none" stroke="url(#q-ink)" stroke-width="4.6" stroke-linecap="round"/>
     <circle cx="51" cy="86" r="4.4" fill="url(#q-dot)"/>
     <g fill="url(#q-leaf)"><path d="M34 22 C28 18 27 11 34 8 C39 14 39 19 34 22 Z"/></g>
