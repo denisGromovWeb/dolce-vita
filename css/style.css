@@ -52,7 +52,7 @@ body{
   color:var(--ink);
   line-height:1.7;
   background:var(--paper);
-  overflow-x:hidden;
+  overflow-x:clip;
 }
 body.is-locked{ overflow:hidden; height:100vh; }
 
@@ -620,6 +620,11 @@ a{ color:inherit; }
   font-family:var(--f-serif); font-size:clamp(1.15rem,2.6vw,1.4rem);
   color:var(--ink); margin:0 0 1.6rem; line-height:1.6;
 }
+@media (max-width:560px){
+  .surprise__card .btn, .lodging__card .btn{
+    font-size:.72rem; letter-spacing:.06em; padding:.85em 1.2em;
+  }
+}
 
 /* ════════════════ РАЗМЕЩЕНИЕ ════════════════ */
 .lodging{ text-align:center; }
@@ -661,7 +666,7 @@ a{ color:inherit; }
 /* ════════════════ ФУТЕР ════════════════ */
 .footer{
   text-align:center;
-  padding:clamp(56px,8vw,96px) 20px clamp(40px,6vw,64px);
+  padding:clamp(56px,8vw,96px) 20px max(clamp(40px,6vw,64px), calc(env(safe-area-inset-bottom) + 36px));
   border-top:1px solid var(--line);
   background:rgba(239,229,209,.4);
 }
