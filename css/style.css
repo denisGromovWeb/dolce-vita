@@ -777,6 +777,12 @@ a{ color:inherit; }
   .cd-cell{ min-width:50px; }
 }
 
+/* десктоп: чуть акцентнее ключевые тексты */
+@media (min-width:861px){
+  .envelope__hint{ font-size:1.2rem; letter-spacing:.03em; color:rgba(90,71,67,.92); }
+  .dresscode .section__lead{ font-size:1.45rem; color:var(--ink); }
+}
+
 /* ════════════════ ДОСТУПНОСТЬ ════════════════ */
 @media (prefers-reduced-motion:reduce){
   *{ animation:none !important; transition-duration:.01ms !important; scroll-behavior:auto; }
