@@ -543,7 +543,7 @@ a{ color:inherit; }
 }
 .lodging__card .lodging__hint{
   font-style:italic; font-size:1.05rem;
-  color:var(--rose-d); margin:-.4rem 0 1.6rem;
+  color:#7f1734; margin:-.4rem 0 1.6rem;
 }
 
 /* ════════════════ FAQ ════════════════ */
